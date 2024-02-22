@@ -7,24 +7,6 @@ var books =
     },
 
     {
-        "name": "C Programming Language, 2nd Edition",
-        "author": "Brian W. Kernighan, Dennis M. Ritchie",
-        "link": "https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628/ref=sr_1_1?keywords=the+c+programming+language+2nd+edition&qid=1657040339&s=books&sprefix=the+c+pro%2Cstripbooks%2C103&sr=1-1"
-    },
-
-    {
-        "name": "Operating Systems: Three Easy Pieces",
-        "author": "Remzi H Arpaci-Dusseau, Andrea C Arpaci-Dusseau",
-        "link": "https://www.amazon.com/Operating-Systems-Three-Easy-Pieces/dp/198508659X/ref=sr_1_1?keywords=operating+systems+three+easy+pieces&qid=1657040396&s=books&sprefix=operating+sys%2Cstripbooks%2C91&sr=1-1"
-    },
-
-    {
-        "name": "Test Driven Development by Example",
-        "author": "Kent Beck",
-        "link": "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530/ref=sr_1_1?keywords=test+driven+development+by+example&qid=1657040439&s=books&sprefix=test+d%2Cstripbooks%2C115&sr=1-1"
-    },
-
-    {
         "name": "Competitive Strategy: Techniques for Analyzing Industries and Competitors",
         "author": "Michael E. Porter",
         "link": "https://www.amazon.com/Competitive-Strategy-Techniques-Industries-Competitors/dp/0684841487/ref=sr_1_1?keywords=competitive+strategy&qid=1657040500&s=books&sprefix=competitive+%2Cstripbooks%2C94&sr=1-1"

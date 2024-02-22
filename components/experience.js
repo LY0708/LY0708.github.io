@@ -1,25 +1,26 @@
 var works = 
 [
     {
-        "time": "Jul 2022 - On going",
-        "position": "Software Engineer @ Account Spark",
-        "descriptions": ['Deploying and maintaining applications on Google Cloud Platform', 'Developing data science/machine learning models in Python, TensorFlow', 'Initiated using Terraform to improve and save time in the deployment process'],
-        "technologies": ['Python', 'TensorFlow', 'Terraform', 'Google Cloud Platform'],
+        "time": "08 2022 - 08 2023",
+        "position": "Software Engineer @ Intel",
+        "descriptions": [
+            'Optimized front end performance by addressing API over-fetching. Developed a caching service layer for static data APIs, and adopted an observable/subscriber architecture for dynamic data APIs, resulting in a 7% improvement in browser load times',
+            'Developed a server that display error messages on the landing page, resulting in a 2% reduction in server workload per instance, eliminated for manually search for error and enhanced operational efficiency', 
+            'Enhanced efficiency for developers and users by adding color-coding in server and debug logs'
+        ],
+        "technologies": ['Test Driven Development', 'JEST Framework', 'Unit Test', 'Functional Test', 'Python', 'TypeScript', 'Flask', 'Angular', 'Git', 'Linux', 'Docker', 'Kubernetes', 'Microservices', 'Agile', 'CI/CD', 'Code Review'],
     },
 
     {
-        "time": "Feb 2022 - May 2022",
-        "position": "Software Engineer Intern @ Ayoka Systems",
-        "descriptions": ['Built and tested a table dashboard for a web application for the client to view its company data', 'Used C# with ASP.NET framework, HTML/CSS, and JavaScript, AG Grid, SQL Server', 'Participated in client meetings and offer recommendations'],
-        "technologies": ['C#', 'ASP.NET', 'HTML/CSS/JS', 'SQL Server'],
+        "time": "01 2022 - 03 2022",
+        "position": "Web Application Developer @ Ayoka Systems",
+        "descriptions": [
+            'Leveraged JavaScript, C#, Vue.js, ASP.NET, and Ag-Grid to develop an interactive web application that visualize customer inventory and manufacturing data',
+            'Designed, developed, and documented 2 API services: the first to efficiently filter and cleanse data, ensuring quality and accuracy; and the second to dynamically generate table specific to user preferences', 
+        ],
+        "technologies": ['C#', 'JavaScript', 'Vue', 'ASP.NET', 'AG-Grid'],
     },
 
-    {
-        "time": "May 2021 - Aug 2021",
-        "position": "Software Engineer Intern @ Tyler Technologies",
-        "descriptions": ['Utilized C# with WPF framework to develop a component of a desktop application', 'Resolved issues related to integrating legacy code into the current modern framework', 'Collaborated with 2 other interns in an agile 2 weeks sprint'],
-        "technologies": ['C#', 'WPF', 'Microsoft SQL'],
-    },
 ]
 
 let positions = document.querySelector('#positions');
@@ -47,11 +48,10 @@ for (let work of works) {
     html = html +
 
     `
-    <div class="2xl:max-w-sm 2xl:rounded 2xl:bg-emerald-400 2xl:text-gray-900 
-                xl:max-w-sm xl:rounded xl:bg-emerald-400 xl:text-gray-900 
+    <div class="xl:bg-emerald-900 xl:text-gray-100 
                 lg:text-slate-400
                 md:text-slate-400" >
-    <div class="px-6 py-4">
+    <div class="px-6 py-4 mt-10">
         <div class="text-m lg:pt-5 md:pt-5">${work["time"]}</div>
         <div class="font-bold mb-2 text-xl">${work["position"]} </div>
 
