@@ -14,9 +14,11 @@ fetch(apiUrl)
 
         let projects_html = `<ol class="list-decimal space-y-5">`;
 
+        const dont_include_names = new Set(['ly0708']);
+
         for (let repo of repos) {
             console.log(repo)
-            if (repo['fork'] == false) {
+            if (repo['fork'] == false && !dont_include_names.has(repo['name'])) {
                 let temp_html = 
                 `
                 <li class="text-emerald-400">  
