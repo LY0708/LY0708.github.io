@@ -14,7 +14,7 @@ fetch(apiUrl)
 
         let projects_html = `<ol class="list-decimal space-y-5">`;
 
-        const dont_include_names = new Set(['ly0708']);
+        const dont_include_names = new Set(['ly0708', 'Todo-list-management']);
 
         for (let repo of repos) {
             console.log(repo)
