@@ -1,0 +1,19 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    --background-color: rgb(16, 15, 15);
+}
+
+
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: var(--background-color);
+}
+
+i {
+    font-size: 180%;
+    margin-right: 3%;
+    color: rgba(192, 193, 190, 0.797);
+}
