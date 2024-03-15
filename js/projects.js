@@ -18,7 +18,7 @@ fetch(apiUrl)
             if (repo['fork'] == false && !dont_include_names.has(repo['name'].toLowerCase())) {
                 let temp_html = 
                 `
-                <div class="div-link" onclick="location.href='${repo['html_url']}'">
+                <div class="div-link" onclick="window.open('${repo['html_url']}', '_blank')">
                     <p class="sub-title" id="project-link">${repo['name'].toLowerCase()}</p>
                     <p class="content">${repo['description'].toLowerCase()}</p>
                 </div>
