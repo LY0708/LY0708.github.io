@@ -11,11 +11,11 @@ fetch(apiUrl)
         let repos = data;
         let projects_html = ``;
 
-        const dont_include_names = new Set(['ly0708', 'todo-list-management', 'larryydev.github.io', 'my-site']);
+        const include_names = new Set(['gonn', 'white_balance_nn']);
 
         for (let repo of repos) {
             console.log(repo['html_url'])
-            if (repo['fork'] == false && !dont_include_names.has(repo['name'].toLowerCase())) {
+            if (repo['fork'] == false && include_names.has(repo['name'].toLowerCase())) {
                 let temp_html = 
                 `
                 <div class="div-link" onclick="window.open('${repo['html_url']}', '_blank')">
