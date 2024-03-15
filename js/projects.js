@@ -1,4 +1,4 @@
-var apiUrl = 'https://api.github.com/users/ly0708/repos';
+var apiUrl = 'https://api.github.com/users/larryydev/repos';
 
 fetch(apiUrl)
     .then(response => {
@@ -11,7 +11,7 @@ fetch(apiUrl)
         let repos = data;
         let projects_html = ``;
 
-        const dont_include_names = new Set(['ly0708', 'todo-list-management', 'ly0708.github.io', 'my-site']);
+        const dont_include_names = new Set(['ly0708', 'todo-list-management', 'larryydev.github.io', 'my-site']);
 
         for (let repo of repos) {
             console.log(repo['html_url'])
