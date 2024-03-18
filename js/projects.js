@@ -11,7 +11,7 @@ fetch(apiUrl)
         let repos = data;
         let projects_html = ``;
 
-        const include_names = new Set(['synapticgo', 'white_balance_nn']);
+        const include_names = new Set(['synapticgo', 'whiteneurix']);
 
         for (let repo of repos) {
             console.log(repo['html_url'])
