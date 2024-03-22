@@ -19,7 +19,7 @@ fetch(apiUrl)
                 let temp_html = 
                 `
                 <div class="div-link" onclick="window.open('${repo['html_url']}', '_blank')">
-                    <p class="sub-title" id="project-link">${repo['name'].toLowerCase()}</p>
+                    <p class="sub-title" id="project-link">${repo['name'].toLowerCase()} &emsp; (${repo['language']})</p>
                     <p class="content">${repo['description'].toLowerCase()}</p>
                 </div>
                 `;
