@@ -1,4 +1,4 @@
-.hidden {
+.animation {
     opacity: 0;
     transform: translateX(-50%);
     transition: all 1.5s;

@@ -11,5 +11,5 @@ const observer = new IntersectionObserver((entries) => {
     });
   }, { once: true }); // Observe the element only once
 
-const hidden_elements = document.querySelectorAll('.hidden');
-hidden_elements.forEach((element) => observer.observe(element));
+const animation_elements = document.querySelectorAll('.animation');
+animation_elements.forEach((element) => observer.observe(element));
