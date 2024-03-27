@@ -5,14 +5,15 @@ const include_repos = new Set(['larryydev.github.io','synapticgo', 'whiteneurix'
 let names = []
 let descriptions = []
 let html_urls = []
-let languagesList = []
+const languages_list = new Map();
+
 
 const fetchPromises = [];
 
-for(const repo of include_repos) {
+for(const repo_name of include_repos) {
 
-    let repo_url = `${base_Url}/${repo}`
-    let repo_lang_url = `${base_Url}/${repo}/languages`
+    let repo_url = `${base_Url}/${repo_name}`
+    let repo_lang_url = `${base_Url}/${repo_name}/languages`
 
     fetchPromises.push(
         fetch(repo_url)
@@ -32,7 +33,7 @@ for(const repo of include_repos) {
             .then(response => response.json())
             .then(data => {
                 let languages = Object.keys(data)
-                languagesList.push(languages)
+                languages_list.set(repo_name,languages)
             })
             .catch(function(){
                 throw new Error('Languages response was not ok');
@@ -46,9 +47,10 @@ Promise.all(fetchPromises)
         let projects_html = ``;
 
         for(let i = 0; i < names.length; i++){
+            let repo_name = names[i].toLowerCase()
             let project_html = `
             <div class="div-link" onclick="window.open('${html_urls[i]}', '_blank')">
-                <p class="sub-title" id="project-link">${names[i].toLowerCase()} &emsp; (${languagesList[i]})</p>
+                <p class="sub-title" id="project-link">${repo_name} &emsp; (${languages_list.get(repo_name)})</p>
                 <p class="content">${descriptions[i].toLowerCase()}</p>
             </div>
             `
