@@ -50,7 +50,7 @@ Promise.all(fetchPromises)
             let repo_name = names[i].toLowerCase()
             let project_html = `
             <div class="div-link" onclick="window.open('${html_urls[i]}', '_blank')">
-                <p class="" id="project-link">${repo_name} &emsp; (${languages_list.get(repo_name)})</p>
+                <p class="project-title">${repo_name} &emsp; (${languages_list.get(repo_name)})</p>
                 <p class="content">${descriptions[i].toLowerCase()}</p>
             </div>
             `
