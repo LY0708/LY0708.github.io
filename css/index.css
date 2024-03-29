@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --light-background-color: rgb(248, 245, 245);
+    --light-title-color: rgb(0, 0, 0);
+    --light-content-color: rgb(0, 0, 0);
+    --light-hover-background-color: rgb(208, 207, 207);
+    --light-hover-color: rgb(0, 0, 0);
+    --light-icon-color: rgb(27, 24, 24);
+
+    --dark-background-color: rgb(16, 15, 15);
+    --dark-title-color: rgb(240, 240, 240);
+    --dark-content-color: rgba(192, 193, 190, 0.797);
+    --dark-hover-background-color: rgb(54, 51, 51);
+    --dark-hover-color: rgb(240, 240, 240);
+    --dark-icon-color: rgb(194, 194, 194);
+
+
+    --background-color: var(--light-background-color);
+    --title-color: var(--light-title-color);
+    --content-color: var(--light-content-color);
+    --hover-background-color: var(--light-hover-background-color);
+    --hover-color: var(--light-hover-color);
+    --icon-color: var(--light-icon-color);
+}
+
 html {
     font-family: "Fira Sans", sans-serif;
     font-weight: 300;
@@ -7,20 +31,84 @@ html {
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    --background-color: rgb(16, 15, 15);
 }
-
 
 body {
     margin-left: 25%;
     margin-right: 25%;
-    background-color: var(--background-color);
 
     letter-spacing: 1px;
+
+    background-color: var(--background-color);
 }
 
 i {
-    font-size: 180%;
     margin-right: 3%;
-    color: rgba(192, 193, 190, 0.797);
+    font-size: 180%;
+    color: var(--icon-color);
+}
+
+
+/* classes */
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.box-end {
+    margin-left: auto;
+}
+
+.no-space {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container {
+    margin-top: 10%;
+    margin-bottom: 15%;
+    padding-left: 3%;
+}
+
+.header {
+    color: var(--title-color);
+}
+
+.title {
+    margin-bottom: 9%;
+    color: var(--title-color);
+}
+
+.project-title {
+    margin-bottom: 2%;
+    color: var(--title-color)
+}
+
+.content {
+    color: var(--content-color);
+}
+
+.div-link {
+    padding: 1px 0 1px 3%;
+}
+
+.button {
+    padding: 1%;
+}
+
+.button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--hover-color);
+    background-color: var(--hover-background-color);
+}
+
+.div-link:hover {
+    border-radius: 25px;
+    cursor: pointer;
+    color: var(--hover-color);
+    background-color: var(--hover-background-color);
 }

@@ -11,17 +11,17 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/class.css">
   <link rel="stylesheet" href="css/animation.css">
 
 
   <script defer src="./js/projects.js"></script>
   <script defer src="./js/blogs.js"></script>
   <script defer src="./js/animation.js"></script>
+  <script defer src="./js/darkMode.js"></script>
+
 
 </head>
 <body>
-
 
   <noscript>
     <div style="border: 1px solid purple; padding: 10px; margin-top: 20%;">
@@ -31,33 +31,45 @@
 
   
   <section class="container animation" id="headline">
-    <p class="no-space" style="color: rgb(240, 240, 240);">Larry Yu</p>
-    <p class="no-space content">Software Engineer</p>
+      <div class="flex-row">
+        <div class="">
+          <p class="header no-space">Larry Yu</p>
+          <p class="content no-space">Software Engineer</p>
+        </div>
+
+        <i class="button bi bi-brightness-high box-end" id="light-mode-button"></i>
+        <i class="button bi bi-moon theme-icon" id="dark-mode-button"></i>
+        
+      </div>
+
   </section>
 
 
   <section class="container animation" id="summary">
-    <p class="no-space title">Hi</p>
-    <p class="no-space content" style="margin-bottom: 5%">I work on things for the future, engineering things for improvement. I think deeply about delivering great user experiences, how things look, feel, and behave.</p>
-    <p class="no-space content" style="margin-bottom: 5%">Great engineering without delighted customers, it's a failure. On the other hand, decent engineering with delighted customers, it's awesome.</p>
+    <p class="title no-space">Hi</p>
+
+    <p class="content no-space" style="margin-bottom: 5%">I work on things for the future, engineering things for improvement. I think deeply about delivering great user experiences, how things look, feel, and behave.</p>
+
+    <p class="content no-space" style="margin-bottom: 5%">Great engineering without delighted customers, it's a failure. Decent engineering with delighted customers, it's awesome. Aim for both with users as the top priority.</p>
+
     <a class="" href="https://www.linkedin.com/in/larryjunhongyu/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
     <a class="" href="mailto:larryyu0116@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope"></i></a>
-    <a class="" href="./assets/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    <a class="content" href="./assets/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
   </section>
 
 
   <section class="container animation" id="today">
-    <p class="no-space title">Today</p>
-    <p class="no-space content">Im solving problems in taxes using software</p>
+    <p class="title no-space">Today</p>
+    <p class="content no-space">Working on problems in taxes using software</p>
   </section>
 
   
-  <p class="container title animation">Projects</p>
+  <p class="title container animation">Projects</p>
   <section class=" animation" id="projects">
   </section>
 
 
-  <p class="container no-space title animation">Blogs</p>
+  <p class="title container no-space animation">Blogs</p>
   <section class="container animation" id="blogs">
   </section>
 
