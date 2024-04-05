@@ -7,6 +7,12 @@ const blogTitlesMap = new Map();
 const blogContentsMap = new Map();
 
 
+function storeBlog(path) {
+    localStorage.setItem("blogPath", path)
+    window.open("./pages/blog.html", "_blank");
+}
+
+
 const fetchData = async () => {
     try {
         // fetch years (first layer of the folders)
@@ -42,21 +48,52 @@ const fetchData = async () => {
     for (const [year, titles] of blogTitlesMap.entries()) {
         for (const title of titles) {
             const titleurl = `${url}${year}/${title}/${title}.md`;
-            const contentResponse = await fetch(titleurl);
-            const contentData = await contentResponse.json();
-            const content = contentData['content'];
-            blogContentsMap.set(title, content);
+            blogContentsMap.set(title, titleurl);
+            // const contentResponse = await fetch(titleurl);
+            // const contentData = await contentResponse.json();
+            // const content = contentData['content'];
         }
     }
 
-    console.log('Data fetched successfully');
-    console.log('Years:', years);
-    console.log('Blog Titles:', blogTitles);
-    console.log('Blog Titles Map:', blogTitlesMap);
-    console.log('Blog Contents Map:', blogContentsMap);
-
     // BUILD HTML
-    let bloglink_html = ``;
+    let blogTable_html = 
+    `
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: auto;">
+    <tbody>
+    `
+    let seenYears = new Set([]);
+
+    const entriesArr = Array.from(blogTitlesMap.entries());
+    entriesArr.sort((a, b) => b[0].localeCompare(a[0]));
+    const sortedBlogTitlesMap = new Map(entriesArr);
+
+    for(const [year, titles] of sortedBlogTitlesMap.entries()) {
+
+        for (const title of titles) {
+
+            blogTable_html += `<tr style="border-bottom: 1px solid #ccc; line-height: 3em;">`;
+
+            if (seenYears.has(year)) {
+                blogTable_html += `<td class="title" style="width: 5%; font-weight: bold;"></td>`;
+            } else {
+                blogTable_html += `<td class="title" style="width: 5%; font-weight: bold;">${year}</td>`;
+                seenYears.add(year);
+            }
+
+
+            blogTable_html += 
+            `
+            <td class="content div-link" style="width: 70%; text-align: center;" onclick="storeBlog('${url}${year}/${title}/${title}.md', '_blank')">
+            ${title}
+            </td>
+            `
+        }
+    }
+
+    blogTable_html += `</tbody></table>`
+
+    let blogs = document.querySelector('#blogs');
+    blogs.innerHTML = blogTable_html;
 
 } catch (error) {
     console.error('Error fetching data:', error);
