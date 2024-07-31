@@ -1,0 +1,13 @@
+#intro {
+    margin-top: 7%;
+}
+
+#intro h1 {
+    font-size: 30px;
+}
+
+#intro p {
+    font-size: 20px;
+    font-style: none;
+    color: rgb(124, 124, 125);
+}
