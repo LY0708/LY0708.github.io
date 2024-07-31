@@ -14,14 +14,14 @@ export const experienceData = [
         description: "At the time, Microsoft was ending support for Silverlight. Tyler's Odyssey needed to be refactored into WPF. I refactored a table component from Silverlight code into modern C# and WPF with Material Design and MVVM architecture."
     },
     {
-        company: "UofA - Lunar and Planetary Lab",
+        company: "Lunar and Planetary Lab",
         location: "Tucson, AZ",
         time: "2018-2019",
         title: "Research Assistant",
         description: "A team researching exoplanets. At the time, the James Webb Telescope (JWT) hadn't launched yet, and researchers at the Lunar and Planetary Lab were writing proposals for which exoplanets JWT should point to once it was launched. I developed an ETL data pipeline using Python to efficiently filter and categorize large datasets, and created data visualizations in Excel to clarify research findings."
     },
     {
-        company: "UofA - McGuire Center for Entrepreneurship",
+        company: "McGuire Center for Entrepreneurship",
         location: "Tucson, AZ",
         time: "2018-2019",
         title: "Analyst",
