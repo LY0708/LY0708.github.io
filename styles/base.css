@@ -35,6 +35,11 @@ html {
         font-style: normal;
     }
 
+    #header {
+        display: flex;
+        justify-content: left;
+    }
+
     #header img {
         width: 20%;
         margin-left: 15%;
