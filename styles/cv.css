@@ -37,6 +37,20 @@
     width: 20%;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#icons a {
+    padding-right: 7%;
+}
+
+#icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #cv h2 {
     font-size: 18px;
 }
